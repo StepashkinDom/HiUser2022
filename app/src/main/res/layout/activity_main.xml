@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:rotationX="4"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/NameErr"
+        android:layout_width="295dp"
+        android:layout_height="22dp"
+        android:text="Имя должно состоять из кирилицы или латиницы"
+        android:textColor="#ff0000"
+        android:textSize="12sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.351" />
+
+    <TextView
+        android:id="@+id/SurNameErr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Фамилия должна состоять из кирилицы или латиницы"
+        android:textColor="#ff0000"
+        android:textSize="12sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.447" />
+
+    <TextView
+        android:id="@+id/DateErr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Пожалуйста, введите дату рождения"
+        android:textColor="#ff0000"
+        android:textSize="12sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.545" />
+
+    <TextView
+        android:id="@+id/PasswordErr"
+        android:layout_width="300dp"
+        android:layout_height="33dp"
+        android:text="Пароль может содержать только латинские буквы и цифры. Длина пароля не менее 8 символов."
+        android:textColor="#ff0000"
+        android:textSize="12sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.649" />
+
+    <TextView
+        android:id="@+id/PasswordReErr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Пароли не совпадают"
+        android:textColor="#ff0000"
+        android:textSize="12sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.734" />
+
+    <EditText
+        android:id="@+id/SurNameText"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:hint="Фамилия"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.398" />
+
+    <EditText
+        android:id="@+id/DateText"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:focusable="false"
+        android:hint="Дата рождения"
+        android:inputType="date"
+        android:minHeight="48dp"
+        android:onClick="calendar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/PasswordText"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:hint="Пароль"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.6" />
+
+    <EditText
+        android:id="@+id/PasswordReText"
+        android:layout_width="210dp"
+        android:layout_height="45dp"
+        android:hint="Подтверждение пароля"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.699" />
+
+    <EditText
+        android:id="@+id/NameText"
+        android:layout_width="210dp"
+        android:layout_height="48dp"
+        android:hint="Имя"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.298" />
+
+    <Button
+        android:id="@+id/Registration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="registr"
+        android:text="Регистрация"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.869" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
